@@ -2,13 +2,13 @@ import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 
 const Home = () => {
-    const { dest } = useRouteMatch()
+    const { url } = useRouteMatch()
     
     return (
         <div className = 'homeContainer'>
-            <h1>Lambda Eats</h1>
-            <Link to = {`${dest}pizza`}>
-                <button id = 'redirect'>Order Pizza</button>
+            <h2>Best pizza online!</h2>
+            <Link to = {`${url}pizza`}>
+                <button id = 'order-pizza'>Order Pizza</button>
             </Link>
         </div>
     )
