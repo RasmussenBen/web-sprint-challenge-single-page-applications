@@ -1,17 +1,17 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 
-export default function Home() {
-    const history = useHistory();
-
-    const routeToOrder = () => {
-        history.push('/order-pizza')
-    }
-
+const Home = () => {
+    const { dest } = useRouteMatch()
+    
     return (
-        <div className = 'home-wrapper'>
+        <div className = 'homeContainer'>
             <h1>Lambda Eats</h1>
-            <button id = 'redirect' onClick = {routeToOrder}>Place an Order</button>
+            <Link to = {`${dest}pizza`}>
+                <button id = 'redirect'>Order Pizza</button>
+            </Link>
         </div>
     )
 }
+
+export default Home;

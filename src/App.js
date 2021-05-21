@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import * as yup from 'yup';
+import { Route, Switch } from 'react-router-dom';
 import formSchema from "./formSchema";
-
+import Home from './Home';
+import OrderForm from './OrderForm';
+import Nav from './nav';
 
 const initialOrderValues = {
   name: '',
@@ -24,7 +27,7 @@ const initialOrderValues = {
   extraCheese: false
 }
 
-const initialFormErrors = {
+const initialOrderErrors = {
   name: '',
   size: '',
   sauce: ''

@@ -6,6 +6,7 @@ export default function OrderForm(props) {
         submit,
         change,
         errors,
+        disabled
     } = props
 
     const onSubmit = event => {
