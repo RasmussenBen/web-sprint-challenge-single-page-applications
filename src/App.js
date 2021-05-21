@@ -24,13 +24,13 @@ const initialOrderValues = {
   artichoke: false,
   threeCheese: false,
   pineapple: false,
-  extraCheese: false
+  extraCheese: false,
+  specialInstructions: ''
 }
 
 const initialOrderErrors = {
   name: '',
-  size: '',
-  sauce: ''
+  size: ''
 }
 
 const initialDisabled = true;
